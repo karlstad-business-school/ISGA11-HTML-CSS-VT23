@@ -7,25 +7,8 @@
   <body>
     <h1>Exempel på tabell</h1>
 
-    <table border="1px solid black">
+    <table>
       <caption>Utgifter 2020</caption>
-      <!--
-        Om tabellen innehåller rader som logiskt hänger samman i tabellhuvud, tabellfot och huvudinnehåll bör vi gruppera dem med <thead>, <tfoot> respektive <tbody>
-      -->
-      <thead>
-        <tr>
-          <!--
-            Tabellceller som är rubriker för en rad eller kolumn ska skapas med <th> istället för <td>. Använd attributet `scope` för att tala om vilka cellen rubriken syftar på.
-          -->
-          <th scope="col">Kategori</th>
-          <th scope="col">Oktober</th>
-          <th scope="col">November</th>
-          <th scope="col">December</th>
-        </tr>
-      </thead>
-      <!--
-        Rader som omsluts med <tfoot>-elementet hamnar sist i tabellen även om vi lägger dem innan <tbody>.
-      -->
       <tfoot>
         <tr>
           <th scope="row">Totalt</th>
@@ -34,29 +17,35 @@
           <td>14 405</td>
         </tr>
       </tfoot>
-      <!--
-        <tbody> innehåller tabellen huvudsakliga innehåll.
-      -->
+      <thead>
+        <tr>
+          <th scope="col">Kategori</th>
+          <th scope="col">Oktober</th>
+          <th scope="col">November</th>
+          <th scope="col">December</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr>
-          <th scope="row">Livsmedel</th>
-          <td>3 688</td>
-          <td>4 983</td>
-          <td>5 700</td>
-        </tr>
-        <tr>
-          <th scope="row">Hushåll</th>
-          <td>911</td>
-          <td>620</td>
-          <td>432</td>
-        </tr>
-        <tr>
-          <th scope="row">Hyra</th>
-          <td>8 273</td>
-          <td>8 273</td>
-          <td>8 273</td>
-        </tr>
-      </tbody>
+      <tr>
+        <th scope="row">Livsmedel</th>
+        <td>3 688</td>
+        <td>4 983</td>
+        <td>5 700</td>
+      </tr>
+      <tr>
+        <th scope="row">Hushåll</th>
+        <td>911</td>
+        <td>620</td>
+        <td>432</td>
+      </tr>
+      <tr>
+        <th scope="row">Hyra</th>
+        <td>8 273</td>
+        <td>8 273</td>
+        <td>8 273</td>
+      </tr>
+    </tbody>
+
     </table>
 
   </body>
