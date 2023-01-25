@@ -21,4 +21,23 @@ a {
 
 .ingredients {
   background-color: #E6E6FA;
+  padding: 20px;
+}
+
+main{
+  display:flex;
+  flex-wrap: wrap;
+  width:800px;
+  max-width: 100%;
+  background-color: aquamarine;
+}
+
+.left-col {
+  width:40%;
+  background-color: coral;
+}
+
+.right-col {
+  width: 60%;
+  background-color: aqua;
 }
