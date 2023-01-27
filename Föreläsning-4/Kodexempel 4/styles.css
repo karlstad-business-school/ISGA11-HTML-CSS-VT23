@@ -1,0 +1,40 @@
+* {box-sizing: content-box;}
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+ul {
+    list-style-type: none;
+    background-color:  pink;
+    display: flex;
+    height: 400px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+ul>li {
+    border: solid 1px yellow;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+ul>li>a {
+    text-decoration: none;
+    font-family: 'Gill Sans', Calibri, sans-serif;
+    font-size: 1.1rem;
+    color:white;
+}
+
+ul>li:hover {
+    background-color: plum;
+}
+
+ul>li:hover>a {
+    color:black;
+}
