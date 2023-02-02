@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|ZCOOL+KuaiLe');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'ZCOOL KuaiLe';
+    font-size: 3rem;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+form {
+    width:100%;
+    max-width: 400px;
+    border: 1px solid silver;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.125);
+}
+
+input[type="text"], input[type="number"], input[type="email"],select,textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    
+}
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: dodgerblue;
+    box-shadow: 0 0 0 3px rgba(30,144,255,0.5);
+}
+
+button {
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.1875rem;
+}
+
+/* SISTA STEG 3 (Överkus) */
+/* 1 - Göm checkbox */
+input[type="checkbox"] {
+    opacity: 0; /* eller display: none eller visibility: hidden */
+}
+
+/* 2 - the box */
+input[type="checkbox"]+label::before {
+	display: inline-block;
+	width: 20px;
+	height:20px;
+	border: solid 3px deepskyblue;
+	border-radius: 3px;
+	content: ''; 
+}
+
+/* 3 - the check */
+input[type="checkbox"]+label::after {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 12px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    
+    transform: rotate(-45deg);
+}
+
+/* 4 - the position */
+input[type="checkbox"]+label {
+    position: relative;
+	padding-left: 5px;
+}
+input[type="checkbox"]+label::before,
+input[type="checkbox"]+label::after {
+    position: absolute;
+}
+
+/*Outer-box*/
+input[type="checkbox"]+label::before {
+    top: -4px;
+	left: -25px;
+}
+
+/*Checkmark*/
+input[type="checkbox"]+label::after {
+    left: -19px;
+    top: 1px;
+}
+
+/* 5 - check - uncheck */
+
+/*Hide the checkmark by default*/
+input[type="checkbox"] + label::after {
+    content: none;
+}
+/*Unhide the checkmark on the checked state*/
+input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+input[type="checkbox"]:focus + label::before {
+    outline: pink auto 2px;
+	
+}
+
