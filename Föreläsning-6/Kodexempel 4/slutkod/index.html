@@ -2,14 +2,31 @@
 <html lang="sv">
   <head>
     <meta charset="utf-8">
-    <title>Kodexempel 3</title>
+    <title>Kodexempel 4</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
       <h1>Hus 1</h1>
       <div class="video">
+        <video 
+          width="560" 
+          height="315"
+          loop 
+          controls 
+          muted 
+          poster="bild.jpg"
+          preload="auto" 
+        >
+          <source src="video.mp4" type="video/mp4">
+          Din webbläsare stödjer inte video-taggen!
+        </video>
 
+        <audio controls loop autoplay>
+          <source src="vatten.mp3" type="audio/mp3">
+          <source src="vatten.ogg" type="audio/ogg">
+          Din webbläsare stöjder inte audio-taggen!
+        </audio>
       </div>
     </main>
   </body>
