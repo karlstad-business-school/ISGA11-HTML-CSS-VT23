@@ -1,0 +1,52 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+}
+
+#page-div{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main{
+	padding: 12px;
+	background-color: salmon;
+	/*width: 66.666667%;*/
+
+	width: calc(100% - 256px);
+}
+
+aside{
+	padding: 12px;
+	background-color: gold;
+	/*width: 33.333333%;*/
+	width: 256px;
+}
+
+header{
+	width: 100%;
+	padding: 12px;
+	background-color: red;
+}
+
+footer{
+	width: 100%;
+	padding: 12px;
+	background-color: lightskyblue;
+}
+
+
+@media (max-width: 612px){
+	main{
+		width: 100%;
+	}
+
+	aside{
+		width: 100%;
+	}
+}

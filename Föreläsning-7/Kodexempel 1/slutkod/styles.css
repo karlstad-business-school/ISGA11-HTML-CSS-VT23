@@ -1,0 +1,46 @@
+/*
+.image{
+	width: 400px;
+	max-width: 100%;
+	height: auto;
+}
+
+*/
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.image{
+	border: 2px solid black;
+	border-radius: 12px;
+}
+
+
+@media screen and (min-width: 900px){
+	.image{
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 899px) and (min-width: 500px){
+	.image{
+		width: 50%;
+	}
+}
+
+
+@media screen and (max-width: 499px){
+	.image{
+		width: 100%;
+		border: none;
+	}
+}
