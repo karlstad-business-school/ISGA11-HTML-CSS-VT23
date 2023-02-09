@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsiv sida</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				box-sizing: border-box;
+				font-family: sans-serif;
+			}
+
+			ul{
+				list-style-type: none;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				background-color: black;
+			}
+			ul>li {
+				padding: 0.5rem;
+				padding-right: 4rem;
+			}
+			ul>li>a {
+				text-decoration: none;
+				color: white;
+				font-size: 1.5rem;
+				font-weight: bold;
+			}
+
+			#hidden-dropdown{
+				position: relative;
+				display: none;
+				padding-right: 20px;
+			}
+			.submenu {
+				display: none;
+				position: absolute;
+				right:0;
+				top:100%;
+				width:200px;
+			}
+
+			article.jumbotron {
+				margin: 0;
+				background-color: lightblue;
+				border: solid 1px gray;
+				border-radius: 3px;
+				padding: 1.5rem;
+				text-align: center;
+			}
+
+			@media (max-width: 400px) {
+
+				.menu-item {
+					display: none;
+				}
+
+				#hidden-dropdown {
+					display: block;
+				}
+				ul>li:hover>ul {
+					display: block;
+				}
+
+
+
+
+
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li class="menu-item"><a href="#">Hem</a></li>
+				<li class="menu-item"><a href="#">Om oss</a></li>
+				<li class="menu-item"><a href="#">Våra tjänster</a></li>
+				<li id="hidden-dropdown">
+					<a href="#">&#x2630;</a>
+					<ul class="submenu">
+						<li><a href="#">Hem</a></li>
+						<li><a href="#">Om oss</a></li>
+						<li><a href="#">Våra tjänster</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<article class="jumbotron">
+				<h1>Stor jääätte rubrik</h1>
+				<p>En säljande text för ett väldigt viktigt budskap</p>
+			</article>
+		</main>
+	</body>
+</html>
